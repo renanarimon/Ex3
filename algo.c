@@ -233,5 +233,5 @@ void AnagramProg()
         }
     }
     ans[strlen(ans) - 1] = '\0';
-    printf("%s\n", ans);
+    printf("%s", ans);
 }

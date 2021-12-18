@@ -2,9 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#define TXT 256
+#define TXT 1024
 #define WORD 30
-#define SIZE 51
 
 static char word[WORD];
 static char txt[TXT];

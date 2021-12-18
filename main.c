@@ -3,7 +3,7 @@
 #include <string.h>
 #include "algo.h"
 
-#define TXT 256
+#define TXT 1024
 #define WORD 30
 
 int main(void)

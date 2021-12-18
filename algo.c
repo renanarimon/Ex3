@@ -77,7 +77,7 @@ void atbash()
 
     int k = 0;
     int i = 0;
-    while (i < strlen(txt))
+    while (i + k < strlen(txt))
     {
         if (txt[i + k] == ' ' && strlen(str) > 0)
         {
@@ -131,21 +131,21 @@ int sumWord()
 void GimatryProg()
 {
     char str[2 * strlen(txt)];
-    str[0]='\0';
+    str[0] = '\0';
     char ans[2 * strlen(txt)];
-    ans[0]='\0';
+    ans[0] = '\0';
     int search = sumWord();
     int sum = 0;
     int k = 0;
     int i = 0;
-    while (i+k < strlen(txt))
+    while (i + k < strlen(txt))
     {
         int GimatriI = gimatryNum(txt[i + k]);
         sum += GimatriI;
         strncat(str, &txt[i + k], 1);
         k++;
         if (sum > search)
-        
+
         {
             k = 0;
             sum = 0;
@@ -153,10 +153,10 @@ void GimatryProg()
             i++;
         }
         if (sum == search)
-        { 
+        {
             if (gimatryNum(str[0]) != 0)
             {
-                
+
                 strcat(ans, str);
                 strcat(ans, "~");
             }
@@ -178,13 +178,14 @@ void removeChar(char *str, char ch)
     int flag = 0;
     for (i = 0, j = 0; i < len; i++, j++)
     {
-        if (str[j] != ch || flag==1)
+        if (str[j] != ch || flag == 1)
         {
             str[i] = str[j];
         }
-        else if(flag==0){
+        else if (flag == 0)
+        {
             i--;
-            flag =1;
+            flag = 1;
         }
     }
 }
@@ -199,9 +200,9 @@ void AnagramProg()
     strcpy(w, word);
     int k = 0;
     int i = 0;
-    while (i < strlen(txt))
+    while (i + k < strlen(txt))
     {
-        char *tmp = strchr(word, txt[i + k]); //searches for the first occurrence of the character txt[i + k]
+        char *tmp = strchr(w, txt[i + k]); //searches for the first occurrence of the character txt[i + k]
 
         if (tmp != NULL)
         {

@@ -138,7 +138,7 @@ void GimatryProg()
     int sum = 0;
     int k = 0;
     int i = 0;
-    while (i < strlen(txt))
+    while (i+k < strlen(txt))
     {
         int GimatriI = gimatryNum(txt[i + k]);
         sum += GimatriI;
